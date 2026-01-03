@@ -72,8 +72,8 @@ def airport_shapley(amount = 10):
     print("---- airport shapley ----")
     (p, m) = airport.create_shapley_map(cost_map)
     total_permutations = math.factorial(amount)
-    print(f"{math.log10(total_permutations)}/{total_permutations} airport shapley values")
-    res = shapley.calc_values_partial(''.join(p), m, math.log10(total_permutations)/total_permutations)
+    print(f"{math.sqrt(total_permutations)}/{total_permutations} airport shapley values")
+    res = shapley.calc_values_partial(''.join(p), m, math.sqrt(total_permutations)/total_permutations)
     show(res)
 
 if __name__ == "__main__":
